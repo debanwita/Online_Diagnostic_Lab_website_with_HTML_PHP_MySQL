@@ -1,0 +1,190 @@
+cd C:\xampp\mysql\bin
+mysql.exe -u root --
+
+create database lab ;
+
+use lab;
+
+create table Lab (Lab_id int(11) not null auto_increment,
+		Reg_no varchar(20) not null,
+		Lab_name varchar(100) not null,
+		Lab_contact bigint not null ,
+		Lab_email varchar(50) not null,
+		Open_time varchar(20) not null,
+		Close_time varchar(20) not null,
+		Street varchar(100) not null,
+		City varchar(30) not null,
+		State varchar(50) not null,
+		Pincode bigint not null,
+		Admin_name varchar(100) not null,
+		Admin_password varchar(150) not null,
+		primary key(Lab_id));
+
+Alter table Lab auto_increment=100;
+
+create table Test(Test_id int(11) not null auto_increment,
+		Test_name varchar(100) not null,
+		Sample_type varchar(200) not null,
+		Department varchar(100) not null,
+		is_parameter boolean,
+		indicator varchar(100),
+		primary key(Test_id));
+
+Alter table Test auto_increment=100;
+
+create table Package(Package_id int(11) not null auto_increment,
+		     Package_name varchar(100) not null,
+		     primary key(Package_id));
+
+Alter table Package auto_increment=100;
+
+create table Offers_test(Lab_id int(11),
+			Test_id int(11),
+			Doctor_name varchar(50) not null,
+			Charge double(10,5) not null,
+			Discount int(4),
+			foreign key(Lab_id) references Lab(Lab_id) on delete cascade,
+		      	foreign key(Test_id) references Test(Test_id) on delete cascade,
+			primary key(Lab_id,Test_id));
+
+create table Offers_package(Lab_id int(11),
+			    Package_id int(11),
+			    Charge double(10,5) not null,
+			    Discount int(4),
+			    foreign key(Lab_id) references Lab(Lab_id) on delete cascade,
+			    foreign key(Package_id) references Package(Package_id) on delete cascade,
+			    primary key(Lab_id,Package_id));
+
+create table Have_tests(Package_id int(11),
+			Test_id int(11),
+			foreign key(Package_id) references Package(Package_id) on delete cascade,
+			foreign key(Test_id) references Test(Test_id) on delete cascade,
+			primary key(Package_id,Test_id));
+
+create table Parameters(Parameter_id int(11) not null auto_increment,
+			Parameter_name varchar(200) not null,
+			max_value double(12,3),
+			min_value double(12,3),
+			unit varchar(100),
+			primary key(Parameter_id));
+
+alter table Parameters auto_increment=100;
+
+create table Contains(Test_id int(11),
+		      Parameter_id int(11),
+		      foreign key(Test_id) references Test(Test_id) on delete cascade,
+		      foreign key(Parameter_id) references Parameters(Parameter_id) on delete cascade,
+		      primary key(Test_id,Parameter_id));
+
+create table Patient(Cust_id int(11) not null auto_increment,
+		     Fname varchar(100) not null,
+		     Lname varchar(100) not null,
+		     Contact bigint not null,
+		     Email varchar(50) not null,
+		     Dob date not null,
+		     Street varchar(200) not null,
+		     City varchar(100) not null,
+		     State varchar(50) not null,
+		     Pincode bigint not null,
+		     Password varchar(100) not null,
+		     primary key(Cust_id));
+
+Alter table Patient auto_increment=100;
+
+create table Book_test(Book_id int(11) not null auto_increment,
+		 Lab_id int(11),
+		 Test_id int(11),
+		 Cust_id int(11),
+	         Book_date date,
+		 foreign key(Lab_id) references Lab(Lab_id) on delete cascade,
+		 foreign key(Test_id) references Test(Test_id) on delete cascade,
+		 primary key(Book_id));
+
+Alter table Book_test auto_increment=100;
+
+create table Bookings_test(Book_id int(11),
+		      Test_date date,
+		      Test_timings varchar(50),
+		      Amount double(10,5),
+		      foreign key(Book_id) references Book_test(Book_id) on delete cascade,
+		      primary key(Book_id));
+
+create table Report_test(Report_id int(11) not null auto_increment,
+		    Book_id int(11),
+		    Generation_date date,
+		    Comments varchar(500),
+		    foreign key(Book_id) references Bookings_test(Book_id) on delete cascade,
+		    primary key(Report_id));
+
+Alter table Report_test auto_increment=100;
+
+create table Consists_of_test(Report_id int(11),
+			Parameter_id int(11) ,
+			Value double(10,5),
+			foreign key(Report_id) references Report_test(Report_id) on delete cascade,
+			foreign key(Parameter_id) references Parameters(Parameter_id) on delete cascade,
+			primary key(Report_id,Parameter_id));
+
+create table Transaction_test(Transaction_id int(11) not null auto_increment,
+			 Book_id int(11),
+			 Time varchar(20),
+			 Date date,
+			 Amount double(10,5),
+			 foreign key(Book_id) references Bookings_test(Book_id) on delete cascade,
+			 primary key(Transaction_id));
+
+Alter table Transaction_test auto_increment=100;
+
+------------------------------
+
+
+create table Book_package(Book_id int(11) not null auto_increment,
+		 Lab_id int(11),
+		 Package_id int(11),
+		 Cust_id int(11),
+	         Book_date date,
+		 foreign key(Lab_id) references Lab(Lab_id) on delete cascade,
+		 foreign key(Package_id) references Package(Package_id) on delete cascade,
+		 primary key(Book_id));
+
+Alter table Book_package auto_increment=100;
+
+create table Bookings_package(Book_id int(11),
+		      Test_date date,
+		      Test_timings varchar(50),
+		      Amount double(10,5),
+		      foreign key(Book_id) references Book_package(Book_id) on delete cascade,
+		      primary key(Book_id));
+
+create table Report_package(Report_id int(11) not null auto_increment,
+		    Book_id int(11),
+		    Generation_date date,
+		    Comments varchar(500),
+		    foreign key(Book_id) references Bookings_package(Book_id) on delete cascade,
+		    primary key(Report_id));
+
+Alter table Report_package auto_increment=100;
+
+create table Consists_of_package(Report_id int(11),
+			Parameter_id int(11) ,
+			Value double(10,5),
+			foreign key(Report_id) references Report_package(Report_id) on delete cascade,
+			foreign key(Parameter_id) references Parameters(Parameter_id) on delete cascade,
+			primary key(Report_id,Parameter_id));
+
+create table Transaction_package(Transaction_id int(11) not null auto_increment,
+			 Book_id int(11),
+			 Time varchar(20),
+			 Date date,
+			 Amount double(10,5),
+			 foreign key(Book_id) references Bookings_package(Book_id) on delete cascade,
+			 primary key(Transaction_id));
+
+Alter table Transaction_package auto_increment=100;
+-------------------------------
+
+
+
+
+
+		

@@ -1,0 +1,79 @@
+#heading{
+	background-color : lightblue;
+	height : 100px;
+	color : black;
+	font-size : 300% ;
+	font-family: "Times New Roman"
+	font-weight : bold;
+	letter-spacing : 3px;
+	word-spacing : 10px;
+	text-align : center;
+	text-shadow: 2px 2px #188FF7;
+}
+#left{
+	left :0;
+	width : 455px;
+	background-color : lightblue ;
+	opacity : 1;
+}
+#right{
+	width : 808px;
+	height : 82%;
+	background-color : #B3BCF2;
+}
+
+#text{
+	font-size : 250% ;
+	font-family: "Times New Roman"
+	font-weight : bold;
+	color : #0D8EA1 ;
+	letter-spacing : 1px;
+	word-spacing : 4px;
+	text-align : center;
+}
+#laboratory{
+	width : 350px;
+	height : 30px;
+}
+#laboratory option{
+	width : 350px;
+}
+#submit{
+	width : 150px;
+}
+#label{
+	width : 150px;
+	font-size : 11pt;
+	text-align : center;
+}
+#label1{
+	width : 200px;
+	height : 45px;
+	text-align : center;
+	font-size : 11pt;
+}
+#date{
+	width :183px;
+	height :45px;
+}
+#test_name{
+	width : 350px;
+	height : 30px;
+}
+#test_date{
+	width : 350px;
+	height : 30px;
+}
+#time{
+	width :367px;
+	height :45px;
+}
+
+#label2{
+	width : 500px;
+	height : 150px;
+	border-width:2px;
+	border-style:solid;
+	border-color:black ;
+	text-align : center;
+}

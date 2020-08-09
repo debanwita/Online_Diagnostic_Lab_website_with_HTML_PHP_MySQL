@@ -1,0 +1,114 @@
+#heading{
+	background-color : lightblue;
+	height : 100px;
+	color : black;
+	font-size : 300% ;
+	font-family: "Times New Roman" ;
+	font-weight : bold;
+	letter-spacing : 3px;
+	word-spacing : 10px;
+	text-align : center;
+	text-shadow: 2px 2px #188FF7;
+}
+#left{
+	left :0;
+	width : 455px;
+	background-color : lightblue ;
+	opacity : 1;
+}
+#right{
+	width : 808px;
+	height : 82%;
+	background-color lightblue;
+}
+
+#text{
+	text-align : center;
+	height : 10px;
+	font-size : 200% ;
+	font-family: "Times New Roman" ;
+	font-weight : bold;
+	color : #0D8EA1 ;
+	letter-spacing : 1px;
+	word-spacing : 4px;
+}
+
+.creditCardForm {
+    width: 800px;
+    height : 400px;
+    background-color:aliceblue;
+    margin : 50px auto;
+    overflow: hidden;
+    padding: 25px;
+    color: #4c4e56;
+}
+.creditCardForm label {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.creditCardForm .payment {
+    float: left;
+    font-size: 18px;
+    padding: 10px 25px;
+    margin-top: 20px;
+    position: relative;
+}
+.creditCardForm .payment .form-group {
+    float: left;
+    margin-bottom: 15px;
+}
+.creditCardForm .payment .form-control {
+    line-height: 40px;
+    height: auto;
+    padding: 0 16px;
+}
+.creditCardForm .owner {
+    width: 63%;
+
+    margin-right: 10px;
+}
+.creditCardForm .CVV {
+    width: 35%;
+}
+.creditCardForm #card-number-field {
+    width: 100%;
+}
+.creditCardForm #expiration-date {
+    width: 49%;
+}
+.creditCardForm #credit_cards {
+    width: 50%;
+    margin-top: 25px;
+    text-align: right;
+}
+.creditCardForm #pay-now {
+    margin-left : 150px;
+    width: 60%;
+    height : 20px;
+}
+.creditCardForm .payment .btn {
+    width: 100%;
+    margin-top: 3px;
+    font-size: 24px;
+    background-color: #2ec4a5;
+    color: white;
+}
+.creditCardForm .payment select {
+    padding: 10px;
+    margin-right: 15px;
+}
+.transparent {
+    opacity: 0.2;
+}
+@media(max-width: 650px) {
+    .creditCardForm .owner,
+    .creditCardForm .CVV,
+    .creditCardForm #expiration-date,
+    .creditCardForm #credit_cards {
+        width: 100%;
+    }
+    .creditCardForm #credit_cards {
+        text-align: left;
+    }
+}

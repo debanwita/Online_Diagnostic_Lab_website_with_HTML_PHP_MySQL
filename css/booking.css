@@ -1,0 +1,57 @@
+#heading{
+	background-color : lightblue;
+	height : 100px;
+	color : black;
+	font-size : 300% ;
+	font-family: "Times New Roman"
+	font-weight : bold;
+	letter-spacing : 3px;
+	word-spacing : 10px;
+	text-align : center;
+	text-shadow: 2px 2px #188FF7;
+}
+#left{
+	left :0;
+	width : 455px;
+	background-color : lightblue ;
+	opacity : 1;
+}
+#right{
+	width : 808px;
+	height : 82%;
+	background-color : #B3BCF2;
+}
+
+#text{
+	font-size : 250% ;
+	font-family: "Times New Roman"
+	font-weight : bold;
+	color : #0D8EA1 ;
+	letter-spacing : 1px;
+	word-spacing : 4px;
+	text-align : center;
+}
+
+#table{
+	background-color : #14C5F4;
+}
+#th{
+	height : 45px;
+	border : 2px black;
+	text-align : center;
+	font-family : "Times New Roman";
+	font-size : '3pt';
+	font-weight : bold ;
+}
+#td{
+	height : 45px;
+	border : 2px black;
+	text-align : center;
+	font-family : "Times New Roman";
+	font-size : '3pt';
+	font-weight : normal;
+}
+#submit{
+	width : 150px;
+	color : blue ;
+}

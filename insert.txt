@@ -1,0 +1,789 @@
+insert into Lab(Reg_no,Lab_name,Lab_contact,Lab_email,
+		Open_time,Close_time,Street,City,State,
+		Pincode,Admin_name,Admin_password)
+values('RG112','SRL Diagnostic Lab',9903066784,'srl@gmail.com',
+	'07:00 A.M.','09:00 P.M.','20B,Surya Sen Street','kolkata','west bengal',
+	700012,'Ashok Roy','aroy1234');
+
+insert into Lab(Reg_no,Lab_name,Lab_contact,Lab_email,
+		Open_time,Close_time,Street,City,State,
+		Pincode,Admin_name,Admin_password)
+values('RG125','Medplus Lab',9432127869,'medplus@gmail.com',
+	'08:00 A.M.','08:30 P.M.','46,Beniatola Lane','kolkata','west bengal',
+	700024,'Puja Saha','psaha5678');
+
+insert into Lab(Reg_no,Lab_name,Lab_contact,Lab_email,
+		Open_time,Close_time,Street,City,State,
+		Pincode,Admin_name,Admin_password)
+values('RG250','Dr.Lal Pathlabs',8902677378,'pathlabs@gmail.com',
+	'08:00 A.M.','07:30 P.M.','74A/1,Beedon Street','kolkata','west bengal',
+	700051,'Santanu Mondol','santanu1234');
+-----------------------------------------------------------------------------------------
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Complete blood count & ESR','blood','hematology',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('CD3/CD4/CD8 Count','blood','hematology',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Hemoglobin Electrophoresis','blood','hematology',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Complete Stool Examination','stool','Clinical Pathology',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Complete Urine Analysis','urine','Clinical Pathology',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Allergy Profiles & Food Allergens','serum','Serology',0,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Dengue IgG Antibody','blood','Serology',0,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Cysticercosis IgG Antibody','blood','Serology',0,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('17-Ketosteroids','urine','Biochemistry',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Serum Calcium Test','serum','Biochemistry',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Serum Phosphorous Test','serum','Biochemistry',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('25 Hydroxy Vitamin D','serum','Biochemistry',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Uric Acid','serum','Biochemistry',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Serum Creatinine','serum','Biochemistry',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Bilirubin Test','serum','Biochemistry',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Serum Albumin Test','serum','Biochemistry',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Serum Globulin Test','serum','Biochemistry',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Thyroid Stimulatinh Hormone(TSH)','serum','Biochemistry',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Total Thyroxine(TT4)','serum','Biochemistry',1,'');
+
+insert into Test(Test_name,Sample_type,Department,is_parameter,indicator)
+values('Total Triiodothyronine(TT3)','serum','Biochemistry',1,'');
+
+
+---------------------------------------------------------------------
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('RBC Count',6.1,4.7,'million mcL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Hemoglobin',17.5,13.5,'grams per deciliter');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Total Leucocyte Count(TC)',11000,4000,'per microliter of blood');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Neutrophils',8000,1500,'mm3');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Lymphocytes',4800,1000,'per microliter of blood');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Monocytes',10,2,'in percentage');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Eosinophils',6.0,0.0,'in percentage');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Basophils',0.3,0,'cubic millimeters(k/ul)');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Platelet Count',450000,150000,'per microliter of blood');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Erithrocyte Sedimentation Rate(ESR)',29,0,'mm/hr');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('CD3 Lymphocyte',2685,614,'cells/microliter');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('CD4 Lymphocyte Count',1493,343,'cells/microliter');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('CD4 Absolute Count',1400,500,'cells/microliter');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('CD8 Lymphocyte Count',800,200,'mm3');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('CD8 Absolute Count',1000,150,'cells/mm3');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('CD4/CD8 Rate',2.0,2.0,'');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Mean Corpuscular Voulme(MCV)',96,80,'fL/red cell');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Mean Corpuscular Hemoglobin(MCH)',33,27,'(pg)/cell');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('RDW-CV',14.50,11.5,'in percentage');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('HbA',3.8,3.2,'in percentage');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('HbA2 Level',4.0,3.5,'in percentage');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('HbF Level',4.4,0.3,'in percentage');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Hb E Window',15,13,'in percentage');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Hb C Window',5.30,4.90,'in percentage');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Stool PH',7.5,7.0,'pH');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Blood',4.5,4.0,'mcL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Pus Cells',4,0,'pvf');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Fat Globules',10,1,'micrometer');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Urine PH',8,4.5,'pH');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Specific Gravity',1.030,1.010,'');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Urine Glucose',0.8,0,'mmol/L ');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Protein Dipstick',500,300,'mg/d');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Urobilinogen',1.0,0.2,'mg/dL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Ketones',40,30,'mg/dL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Epithelial Cells',4,0,'pvf');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Anti Cysticercosis(IgG) Antibody',1.1,0.9,'in 1V');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('24 hrs Urine Volume',2000,800,'milliliters per day');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('17-Ketosteroids-Urine',20,10,'mg');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Serum Calcium',10.2,8.5,'mg/dL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Serum Phosphrous',4.5,2.5,'ng/dL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('25 Hydroxy Vitamin D',100,20,'ng/mL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Uric Acid',6.0,2.4,'mg/dL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Serum Creatinine',1.2,0.6,'ng/dL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Total Bilirubin',1.9,0.3,'mg/dL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Indirect Bilirubin',1.7,0.3,'mg/dL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Direct Bilirubin',0.3,0.0,'mg/dL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Serum Albumin',5.5,3.5,'g/dL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('Serum Globulin',3.5,2.0,'g/dL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('TSH',4.0,0.4,'milli-international units/liter');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('TT4',12,4.6,'ug/dL');
+
+insert into Parameters(Parameter_name,max_value,min_value,unit)
+values('TT3',220,80,'ng/dL');
+
+-------------------------------------------------------------------------
+
+insert into Contains(Test_id,Parameter_id)
+values(100,100);
+
+insert into Contains(Test_id,Parameter_id)
+values(100,101);
+
+insert into Contains(Test_id,Parameter_id)
+values(100,102);
+
+insert into Contains(Test_id,Parameter_id)
+values(100,103);
+
+insert into Contains(Test_id,Parameter_id)
+values(100,104);
+
+insert into Contains(Test_id,Parameter_id)
+values(100,105);
+
+insert into Contains(Test_id,Parameter_id)
+values(100,106);
+
+insert into Contains(Test_id,Parameter_id)
+values(100,107);
+
+insert into Contains(Test_id,Parameter_id)
+values(100,108);
+
+insert into Contains(Test_id,Parameter_id)
+values(100,109);
+-------
+
+insert into Contains(Test_id,Parameter_id)
+values(101,110);
+
+insert into Contains(Test_id,Parameter_id)
+values(101,111);
+
+insert into Contains(Test_id,Parameter_id)
+values(101,112);
+
+insert into Contains(Test_id,Parameter_id)
+values(101,113);
+
+insert into Contains(Test_id,Parameter_id)
+values(101,114);
+
+insert into Contains(Test_id,Parameter_id)
+values(101,115);
+-------
+
+insert into Contains(Test_id,Parameter_id)
+values(102,100);
+
+insert into Contains(Test_id,Parameter_id)
+values(102,101);
+
+insert into Contains(Test_id,Parameter_id)
+values(102,116);
+
+insert into Contains(Test_id,Parameter_id)
+values(102,117);
+
+insert into Contains(Test_id,Parameter_id)
+values(102,118);
+
+insert into Contains(Test_id,Parameter_id)
+values(102,119);
+
+insert into Contains(Test_id,Parameter_id)
+values(102,120);
+
+insert into Contains(Test_id,Parameter_id)
+values(102,121);
+
+insert into Contains(Test_id,Parameter_id)
+values(102,122);
+
+insert into Contains(Test_id,Parameter_id)
+values(102,123);
+----------
+
+insert into Contains(Test_id,Parameter_id)
+values(103,124);
+
+insert into Contains(Test_id,Parameter_id)
+values(103,125);
+
+insert into Contains(Test_id,Parameter_id)
+values(103,126);
+
+insert into Contains(Test_id,Parameter_id)
+values(103,100);
+
+insert into Contains(Test_id,Parameter_id)
+values(103,127);
+---------
+
+insert into Contains(Test_id,Parameter_id)
+values(104,128);
+
+insert into Contains(Test_id,Parameter_id)
+values(104,129);
+
+insert into Contains(Test_id,Parameter_id)
+values(104,130);
+
+insert into Contains(Test_id,Parameter_id)
+values(104,131);
+
+insert into Contains(Test_id,Parameter_id)
+values(104,125);
+
+insert into Contains(Test_id,Parameter_id)
+values(104,132);
+
+insert into Contains(Test_id,Parameter_id)
+values(104,133);
+
+insert into Contains(Test_id,Parameter_id)
+values(104,126);
+
+insert into Contains(Test_id,Parameter_id)
+values(104,134);
+
+insert into Contains(Test_id,Parameter_id)
+values(104,100);
+---------
+
+insert into Contains(Test_id,Parameter_id)
+values(107,135);
+--------
+
+insert into Contains(Test_id,Parameter_id)
+values(108,136);
+
+insert into Contains(Test_id,Parameter_id)
+values(108,137);
+
+----------
+insert into Contains(Test_id,Parameter_id)
+values(109,138);
+----------
+
+insert into Contains(Test_id,Parameter_id)
+values(110,139);
+----------
+
+insert into Contains(Test_id,Parameter_id)
+values(111,140);
+----------
+
+insert into Contains(Test_id,Parameter_id)
+values(112,141);
+----------
+
+insert into Contains(Test_id,Parameter_id)
+values(113,142);
+----------
+
+insert into Contains(Test_id,Parameter_id)
+values(114,143);
+
+insert into Contains(Test_id,Parameter_id)
+values(114,144);
+
+insert into Contains(Test_id,Parameter_id)
+values(114,145);
+
+----------
+
+insert into Contains(Test_id,Parameter_id)
+values(115,146);
+----------
+
+insert into Contains(Test_id,Parameter_id)
+values(116,147);
+----------
+
+insert into Contains(Test_id,Parameter_id)
+values(117,148);
+----------
+
+insert into Contains(Test_id,Parameter_id)
+values(118,149);
+----------
+
+insert into Contains(Test_id,Parameter_id)
+values(119,150);
+
+
+------------------------------------------------------------------
+
+insert into Offers_test
+values(100,100,"Dr.A.Roy",350,30);
+
+insert into Offers_test
+values(100,101,"Dr.R.Barua",1500,30);
+
+insert into Offers_test
+values(100,102,"Dr.S.khan",80,30);
+
+insert into Offers_test
+values(100,109,"Dr.P.Samanta",180,30);
+
+insert into Offers_test
+values(100,110,"Dr.M.Gupta",250,30);
+
+insert into Offers_test
+values(100,111,"Dr.L.Saha",1600,30);
+
+insert into Offers_test
+values(100,105,"Dr.L.Saha",150,30);
+----------------
+
+insert into Offers_test
+values(101,103,"Dr.A.Roy",150,30);
+
+insert into Offers_test
+values(101,104,"Dr.M.Barua",120,30);
+
+insert into Offers_test
+values(101,100,"Dr.P.khan",150,30);
+
+insert into Offers_test
+values(101,108,"Dr.L.Samanta",3200,30);
+
+insert into Offers_test
+values(101,112,"Dr.E.Gupta",180,30);
+
+insert into Offers_test
+values(101,113,"Dr.D.Saha",150,30);
+
+insert into Offers_test
+values(101,106,"Dr.M.Mullick",800,30);
+-------------
+
+insert into Offers_test
+values(102,114,"Dr.B.Roy",300,30);
+
+insert into Offers_test
+values(102,115,"Dr.P.Barua",120,30);
+
+insert into Offers_test
+values(102,116,"Dr.K.khan",250,30);
+
+insert into Offers_test
+values(102,117,"Dr.S.Samanta",200,30);
+
+insert into Offers_test
+values(102,118,"Dr.B.Gupta",200,30);
+
+insert into Offers_test
+values(102,119,"Dr.R.Saha",200,30);
+
+insert into Offers_test
+values(102,107,"Dr.N.Saha",1500,30);
+----------------------------------------------------
+
+insert into Package(Package_name)
+values('Complete Blood Test Package');
+
+insert into Package(Package_name)
+values('Bone Health Package');
+
+insert into Package(Package_name)
+values('Child Preventive Health Checkup Package');
+
+insert into Package(Package_name)
+values('Kidney Function Profile');
+
+insert into Package(Package_name)
+values('Liver Function Test(LFT)');
+
+insert into Package(Package_name)
+values('Thyroid Profile');
+
+-------------------------------------------------
+
+insert into Have_tests
+values(100,100);
+
+insert into Have_tests
+values(100,101);
+
+insert into Have_tests
+values(100,102);
+---------
+
+insert into Have_tests
+values(101,109);
+
+insert into Have_tests
+values(101,110);
+
+insert into Have_tests
+values(101,101);
+--------
+
+insert into Have_tests
+values(102,103);
+
+insert into Have_tests
+values(102,104);
+
+insert into Have_tests
+values(102,100);
+---------
+
+insert into Have_tests
+values(103,104);
+
+insert into Have_tests
+values(103,112);
+
+insert into Have_tests
+values(103,113);
+--------
+
+insert into Have_tests
+values(104,114);
+
+insert into Have_tests
+values(104,115);
+
+insert into Have_tests
+values(104,116);
+-------
+
+insert into Have_tests
+values(105,117);
+
+insert into Have_tests
+values(105,118);
+
+insert into Have_tests
+values(105,119);
+
+-------------------------------
+
+insert into Offers_package
+values(100,100,1930,30);
+
+insert into Offers_package
+values(100,101,2030,30);
+---------
+
+insert into Offers_package
+values(101,102,620,30);
+
+insert into Offers_package
+values(101,103,450,30);
+-------
+
+insert into Offers_package
+values(102,104,670,30);
+
+insert into Offers_package
+values(102,105,600,30);
+
+-------------------------------------------------------
+
+insert into Patient(Fname,Lname,Contact,Email,Dob,Street,City,State,Pincode,Password)
+values('debanwita','dutta',9903066784,'debanwita4dt@gmail.com','1998-09-04','Surya Sen Street','Kolkata','West Bengal',700012,'debanwita');
+
+------------------------------------------------------------
+
+
+insert into Report_test(Book_id,Generation_date,Comments)
+values(100,'2019-05-05','1.Dengue is positive');
+
+insert into Report_test(Book_id,Generation_date,Comments)
+values(101,'2019-07-15','1.All are clear');
+
+update Report_test set Comments='1) All are clear.
+				 2) Color of the stool : yellow.
+				 3) Bile pigments : found. ' 
+where Report_id=101;
+
+update Report_test set Comments='1) Dengue IgG antibody is positive.
+				 2) Possible Interpretation : Current Infection.'
+where Report_id=100;
+
+--------------------------------------------------------------
+
+insert into Consists_of_test(Report_id,Parameter_id,Value)
+values(101,100,7.5);
+
+insert into Consists_of_test(Report_id,Parameter_id,Value)
+values(101,101,14.5);
+
+insert into Consists_of_test(Report_id,Parameter_id,Value)
+values(101,102,7000);
+
+insert into Consists_of_test(Report_id,Parameter_id,Value)
+values(101,103,4500);
+
+insert into Consists_of_test(Report_id,Parameter_id,Value)
+values(101,104,3000);
+
+insert into Consists_of_test(Report_id,Parameter_id,Value)
+values(101,105,4.0);
+
+insert into Consists_of_test(Report_id,Parameter_id,Value)
+values(101,106,5.0);
+
+insert into Consists_of_test(Report_id,Parameter_id,Value)
+values(101,107,0.2);
+
+insert into Consists_of_test(Report_id,Parameter_id,Value)
+values(101,108,350000);
+
+insert into Consists_of_test(Report_id,Parameter_id,Value)
+values(101,109,27);
+
+----------------------------
+
+insert into Report_package(Book_id,Generation_date,Comments)
+values(100,'2019-06-23','');
+
+insert into Report_package(Book_id,Generation_date,Comments)
+values(102,'2019-05-29','1) Color of the urine : Yellow. 2) Apperance of the urine : Cloudy. 3) Crystal : present in urine : Crystalluria present.
+			4) Nitrite : present in urine : presence of bacterial infection. 5) Bite salts in urine : positive');
+
+----------------------------
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(100,110,2010.00);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(100,111,510.10);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(100,112,1000.00);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(100,113,600.00);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(100,114,100.00);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(100,115,2.00);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(100,138,11.50);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(100,139,3.80);
+
+----------
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,100,5.5);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,125,5.0);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,126,3.00);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,127,9.00);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,128,7.8);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,129,1.010);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,130,0.65);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,131,400.00);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,132,0.8);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,133,45.00);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,134,3.00);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,141,7.8);
+
+insert into Consists_of_package(Report_id,Parameter_id,Value)
+values(101,142,0.8);
+
+---------------------------------------
+
+
+
+select distinct Parameters.Parameter_id,Parameter_name,Max_value,Min_value,Unit ,Value from Parameters,Test,Contains,Consists_of_test 
+where Test.Test_id=Contains.Test_id and Parameters.Parameter_id=Contains.Parameter_id and Test.Test_id=100 and Report_id=101 ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+insert into Offers_test values(1,1,'ABCD',150.30,10);
+insert into Offers_test values(101,100,'Dr.GHIJ',150.30,10);
+insert into Offers_test values(101,101,'Dr.Abhijit Ghosh',500,10);
+
+
+<script type="text/javascript">
+ 	document.getElementById('laboratory').value ="<?php echo $_POST['laboratory'];?>" ;
+</script>
+
+insert into Patient(Fname,Lname,Contact,Email,Dob,Street,City,State,Pincode,Password)
+values('debanwita','dutta',9903066784,'debanwita4dt@gmail.com','1998-09-04','Surya Sen Street','Kolkata','West Bengal',700012,'debanwita');
+
+insert into Book(Lab_id,Test_id,Cust_id,Book_date) 
+values(100,100,100,'2018-12-31') ;
+
+delete from Book where Book_id=100;
+
+alter table Book auto_increment=100;
+
+delete from Transaction where Transaction_id>=4;
